@@ -3,7 +3,7 @@ var csv = require('csvtojson')
 
 const importCSV = async (req, res) => {
   try {
-    var userdata=[]
+    var userdata = []
     csv()
       .fromFile(req.file.path)
       .then(async (response) => {
@@ -13,17 +13,16 @@ const importCSV = async (req, res) => {
             event_name: response[x].event_name,
             city_name: response[x].city_name,
             date: response[x].date,
-            time: response[x].time,
             latitude: response[x].latitude,
             longitude: response[x].longitude,
-           
-
-
+            //console.log(response)
           })
-        }
-        await data.insertMany(userdata)
-      })
-    res.send({ status: 200, success: true, msg: "running" })
+
+          }
+
+          await data.insertMany(userdata)
+        })
+        res.send({ status: 200, success: true, msg: "running" })
 
   } catch (error) {
     res.send({ status: 404, success: false, msg: error.message })

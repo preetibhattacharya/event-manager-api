@@ -9,6 +9,9 @@ mongoose.connect(URI)
 var dataRoute=require('./routes/dataroutes')
 app.use('/',dataRoute)
 
+var eventroute = require('./routes/event_finderRoute')
+app.use('/',eventroute)
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
