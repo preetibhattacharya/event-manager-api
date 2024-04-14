@@ -18,3 +18,58 @@ I have chosen Javascript for approaching the problem as i am curently working in
 
 # Challenges Faced
 The biggest challenge for me was to call external apis as there documentation was not given to me. So,I chose to calculate distance by manually writing the logic by applying 'HaverSine Formula' and chose the best-fit weather api the 'openweathermap' which was best suiting my requriements.
+
+# Event Weather Predictor
+
+Event Weather Predictor is a Node.js application that allows users to import event data from a CSV file into a MongoDB database and retrieve event information including weather predictions and distances from a given latitude and longitude.
+
+## Features
+
+- Import event data from CSV files into MongoDB.
+- Retrieve event information including weather predictions and distances.
+- Utilizes MongoDB Atlas for cloud-based database storage.
+- Uses various Node.js dependencies including Express, Mongoose, Axios, csvtojson, and more.
+
+## Installation
+
+1. Clone the repository:
+
+    ```
+    git clone https://github.com/your-username/event-weather-predictor.git
+    ```
+
+2. Install dependencies:
+
+    ```
+    cd event-weather-predictor
+    npm install
+    ```
+
+3. Create a `.env` file in the root directory and add the following environment variables:
+
+    ```
+    MONGODB_URI=<your_mongodb_uri>
+    OPENWEATHERMAP_API_KEY=<your_openweathermap_api_key>
+    ```
+
+4. Start the server:
+
+    ```
+    npm start
+    ```
+
+## Usage
+
+### Import Event Data
+
+To import event data from a CSV file, make a `POST` request to `/importdata` endpoint with the CSV file using tools like Postman or cURL:
+
+
+
+### Find Events
+
+To find events, predict the weather of event locations, and find the distance of event locations from a given latitude and longitude, make a `GET` request to `/events/find` endpoint with latitude, longitude, and date parameters:
+
+
+
+
