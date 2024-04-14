@@ -35,13 +35,13 @@ Event Weather Predictor is a Node.js application that allows users to import eve
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/event-weather-predictor.git
+    git clone https://github.com/your-username/event-manager-api.git
     ```
 
 2. Install dependencies:
 
     ```
-    cd event-weather-predictor
+    cd event-manager-api
     npm install
     ```
 
